@@ -1,0 +1,8 @@
+---
+- name: Install PHP-FPM
+  hosts: localhost
+  become: true
+#  vars_files:
+#      - group_vars/mysql.yml
+  roles:
+    - php-fpm

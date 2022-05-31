@@ -1,0 +1,22 @@
+---
+- name: Install php-fpm and deps
+  apt: name={{ item }} state=present
+  with_items:
+    - php7.3
+    - php-fpm
+    - php-enchant
+    - php-net-idna2
+    - php-mbstring
+    - php-mysql
+    - php-mail
+#    - php-process
+#    - php-simplepie
+    - php-xml
+
+#- name: Disable default pool
+#  command: mv /etc/php-fpm.d/www.conf /etc/php-fpm.d/www.disabled creates=/etc/php-fpm.d/www.disabled
+#  notify: restart php-fpm
+
+- name: Copy php-fpm configuration
+  template: src=wordpress.conf dest=/etc/php/7.3/fpm/php-fpm.conf
+  notify: restart php-fpm
