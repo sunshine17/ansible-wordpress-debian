@@ -1,6 +1,6 @@
 ---
 - name: Install nginx
-  apt: name=nginx state=present
+  yum: name=nginx state=present
 
 - name: Delete default nginx config files & directory
   file:
