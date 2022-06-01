@@ -25,4 +25,6 @@ auto_up_disable: false
 #minor = Minor updates are enabled, development, and major updates are disabled
 core_update_level: true
 
+db_host: database-1-master.crxojdlslivv.us-west-2.rds.amazonaws.com
+
 #php_server_addr: localhost:9090

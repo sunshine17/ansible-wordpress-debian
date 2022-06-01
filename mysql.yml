@@ -2,7 +2,7 @@
 - name: Install Nginx
   hosts: localhost
   become: true
-  vars_files:
-      - group_vars/mysql.yml
+#  vars_files:
+#      - group_vars/mysql.yml
   roles:
     - mysql
