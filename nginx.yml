@@ -5,4 +5,5 @@
   vars_files:
       - group_vars/nginx.yml
   roles:
+    - nginxinc.nginx
     - nginx
