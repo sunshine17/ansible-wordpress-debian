@@ -1,16 +1,16 @@
 ---
 - name: Install php-fpm and deps
-  apt: name={{ item }} state=present
+  yum: name={{ item }} state=present
   with_items:
     - php7.3
     - php-fpm
     - php-enchant
-    - php-net-idna2
+    - php-IDNA_Convert
     - php-mbstring
     - php-mysql
-    - php-mail
-#    - php-process
-#    - php-simplepie
+    - php-PHPMailer
+    - php-process
+    - php-simplepie
     - php-xml
 
 #- name: Disable default pool
